@@ -1,0 +1,50 @@
+.about-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic-about {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .about-details {
+    flex: 1;
+  }
+  
+  .about-details h1 {
+    margin-top: 0;
+  }
+  
+  .skills {
+    margin-top: 20px;
+  }
+  
+  .skills h2 {
+    margin-bottom: 10px;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skill-item {
+    margin: 10px;
+  }
+  
+  .skill-logo {
+    width: 40px; /* Daha küçük logo */
+    height: 40px; /* Daha küçük logo */
+  }

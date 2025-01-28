@@ -1,0 +1,55 @@
+.intro {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .work-experience {
+    padding: 20px;
+  }
+  
+  .work-experience h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .work-experience-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .work-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 70px 70px 70px 70px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .work-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .company-logo {
+    border-radius: 50px 50px 50px 50px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .work-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .work-details p {
+    margin: 5px 0;
+    color: #666;
+  }
