@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     publicPath: '/', // Bu satırı ekleyin
   },
   module: {
@@ -21,36 +21,38 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|ico)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/',
-              publicPath: 'assets/',
+              name: '[path][name].[ext]',
             },
           },
         ],
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
     ],
   },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html', // Bu satırı güncelleyin
+      template: './public/index.html',
+      filename: 'index.html',
+      favicon: './src/assets/favicon.ico', // Bu satırı ekleyin
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'build'),
+    },
     compress: true,
     port: 9000,
     historyApiFallback: true, // Bu satırı ekleyin
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
 };
